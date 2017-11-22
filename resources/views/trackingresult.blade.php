@@ -42,7 +42,17 @@
             <hr>
 
             <div class="row">
-                <img src="https://maps.googleapis.com/maps/api/staticmap?center={{ $tracking->location }}" alt="">
+                <div class="col-md-4 col-sm-4">
+                    <h3>TRACKING NO: {{ $tracking->trackingID }}</h3>
+                    <br>
+                    <img src="{{ asset('images/barcode.png') }}" alt="Barcode">
+                </div>
+                <div class="col-md-8 col-sm-8">
+                    <img src="http://maps.googleapis.com/maps/api/staticmap?center={{ $tracking->geolocation }}
+                    &markers=color:blue%7Clabel:S%7C11211%7C11206%7C11222&zoom=15&size=900x350
+                    &key=AIzaSyB7Pnis6JtjO519HDhwTvsJZ3rPC-B1_TE" width="100%" style="border-radius: 10px"
+                    alt="Location">
+                </div>
             </div>
 
             <hr>

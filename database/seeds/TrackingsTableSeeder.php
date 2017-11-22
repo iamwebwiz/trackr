@@ -14,7 +14,7 @@ class TrackingsTableSeeder extends Seeder
         $tracking = new \App\Tracking;
 
         $tracking->trackingID = str_random(7);
-        $tracking->geolocation = 'Ibadan';
+        $tracking->geolocation = 'Ibadan, Nigeria';
         $tracking->shipper_address = 'Lagos';
         $tracking->receiver_address = 'Magboro, Lagos';
         $tracking->origin = 'Magboro, Lagos';
