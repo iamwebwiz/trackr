@@ -28,6 +28,7 @@ class TrackingsController extends Controller
     {
         $tracking = new \App\Tracking;
         $tracking->trackingID = str_random(7);
+        $tracking->geolocation = $request->geolocation;
         $tracking->shipper_address = $request->shipper_address;
         $tracking->receiver_address = $request->receiver_address;
         $tracking->origin = $request->origin;
