@@ -63,7 +63,7 @@
                                     <div class="form-group">
                                         <label for="departure_time" class="control-label col-sm-4">Departure Time</label>
                                         <div class="col-sm-8">
-                                            <input type="time" name="departure_time" placeholder="Departure Time" class="form-control">
+                                            <input type="text" name="departure_time" placeholder="Departure Time" class="form-control">
                                         </div>
                                     </div>
 
@@ -105,21 +105,21 @@
                                     <div class="form-group">
                                         <label for="pickup_date" class="control-label col-sm-4">Pickup Date</label>
                                         <div class="col-sm-8">
-                                            <input type="date" name="pickup_date" placeholder="Pickup Date" class="form-control">
+                                            <input type="text" name="pickup_date" placeholder="Pickup Date" class="form-control">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="pickup_time" class="control-label col-sm-4">Pickup Time</label>
                                         <div class="col-sm-8">
-                                            <input type="time" name="pickup_time" placeholder="Pickup Time" class="form-control">
+                                            <input type="text" name="pickup_time" placeholder="Pickup Time" class="form-control">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="expected_delivery_date" class="control-label col-sm-4">Expected Delivery Date</label>
                                         <div class="col-sm-8">
-                                            <input type="date" name="expected_delivery_date" placeholder="Expected Delivery Date" class="form-control">
+                                            <input type="text" name="expected_delivery_date" placeholder="Expected Delivery Date" class="form-control">
                                         </div>
                                     </div>
 

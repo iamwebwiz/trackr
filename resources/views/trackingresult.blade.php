@@ -42,6 +42,12 @@
             <hr>
 
             <div class="row">
+                <img src="https://maps.googleapis.com/maps/api/staticmap?center={{ $tracking->location }}" alt="">
+            </div>
+
+            <hr>
+
+            <div class="row">
                 <div class="col-md-6">
                     <div class="panel panel-default">
                         <div class="panel-heading">
