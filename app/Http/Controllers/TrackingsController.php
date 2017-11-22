@@ -48,6 +48,6 @@ class TrackingsController extends Controller
         $tracking->shipment_mode = $request->shipment_mode;
         $tracking->shipment_status = $request->shipment_status;
         $tracking->save();
-        return back()->with('success', 'Tracking Added Successfully!');
+        return redirect()->route('showAllTrackings')->with('success', 'Tracking Added Successfully!');
     }
 }

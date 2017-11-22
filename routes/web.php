@@ -20,3 +20,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('trackings', 'TrackingsController@showAllTrackings')->name('showAllTrackings');
 Route::get('trackings/new', 'TrackingsController@showNewTrackingForm')->name('showNewTrackingForm');
+Route::post('trackings/new', 'TrackingsController@addNewTracking')->name('addNewTracking');

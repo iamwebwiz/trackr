@@ -26,6 +26,7 @@
                     <div class="panel-heading">
                         <h4>Generated Trackings</h4>
                     </div>
+                    @include('partials.alerts')
                     <div class="panel-body">
                         @if (count($trackings) > 0)
                             <div class="table-responsive">
