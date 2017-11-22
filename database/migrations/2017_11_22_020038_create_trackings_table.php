@@ -16,6 +16,7 @@ class CreateTrackingsTable extends Migration
         Schema::create('trackings', function (Blueprint $table) {
             $table->increments('id');
             $table->string('trackingID')->unique();
+            $table->string('geolocation');
             $table->text('shipper_address');
             $table->text('receiver_address');
             $table->string('origin');
