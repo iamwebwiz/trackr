@@ -29,9 +29,9 @@ class CreateTrackingsTable extends Migration
             $table->string('weight');
             $table->string('product');
             $table->integer('totalFreight');
-            $table->string('pickup_date');
-            $table->string('pickup_time');
-            $table->string('expected_delivery_date');
+            $table->date('pickup_date');
+            $table->time('pickup_time');
+            $table->date('expected_delivery_date');
             $table->integer('quantity');
             $table->string('shipment_mode');
             $table->string('shipment_status');

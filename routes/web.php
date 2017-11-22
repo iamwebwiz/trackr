@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('track', 'FrontendController@showTrackingForm')->name('showTrackingForm');
+Route::post('track', 'FrontendController@displayTrackingDetails')->name('displayTrackingDetails');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
