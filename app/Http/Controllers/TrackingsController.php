@@ -15,7 +15,7 @@ class TrackingsController extends Controller
 
     public function showAllTrackings()
     {
-        $this->data['trackings'] = Tracking::paginate(30);
+        $this->data['trackings'] = \App\Tracking::paginate(30);
         return view('tracking/index', $this->data);
     }
 
