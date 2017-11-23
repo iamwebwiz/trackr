@@ -134,7 +134,7 @@
                                         <h4>Carrier:</h4> {{ $tracking->carrier }}
                                     </div>
                                     <div class="col-md-4 col-sm-4">
-                                        {{-- <h4>Carrier:</h4> {{ $tracking->carrier }} --}}
+                                        <h4>Departure Time:</h4> {{ $tracking->departure_time }}
                                     </div>
                                 </div>
                                 <hr>
@@ -164,10 +164,10 @@
                                 <hr>
                                 <div class="row">
                                     <div class="col-md-4 col-sm-4">
-                                        <h4>Payment Mode:</h4> {{ $tracking->payment_mode }}
+                                        <h4>Pick-up Time:</h4> {{ $tracking->pickup_time }}
                                     </div>
                                     <div class="col-md-4 col-sm-4">
-                                        {{-- <h4>Total Freight:</h4> {{ $tracking->totalFreight }} --}}
+                                        <h4>Pick-up Date:</h4> {{ $tracking->pickup_date }}
                                     </div>
                                     <div class="col-md-4 col-sm-4">
                                         <h4>Expected Delivery Date:</h4> {{ $tracking->expected_delivery_date }}
@@ -176,13 +176,7 @@
                                 <hr>
                                 <div class="row">
                                     <div class="col-md-4 col-sm-4">
-                                        <h4>Departure Time:</h4> {{ $tracking->departure_time }}
-                                    </div>
-                                    <div class="col-md-4 col-sm-4">
-                                        <h4>Pick-up Date:</h4> {{ $tracking->pickup_date }}
-                                    </div>
-                                    <div class="col-md-4 col-sm-4">
-                                        <h4>Pick-up Time:</h4> {{ $tracking->pickup_time }}
+                                        <h4>Payment Mode:</h4> {{ $tracking->payment_mode }}
                                     </div>
                                 </div>
                             </div>
