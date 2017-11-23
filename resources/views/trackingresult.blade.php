@@ -18,6 +18,7 @@
                 padding-top: 50px;
             }
         </style>
+
     </head>
     <body>
 
@@ -59,28 +60,32 @@
                         <img src="{{ asset('images/barcode.png') }}" alt="Barcode">
                     </div>
                     <div class="col-md-8 col-sm-8">
-                        @if (!is_null($tracking->geolocaton))
-                            <iframe src="//www.google.com/maps/embed/v1/place?q={{ urlencode($tracking->geolocation) }}
+                        @if (is_null($tracking->geolocation))
+                            <div id="map" style="width:100%;height:400px;border:none;border-radius:10px"></div>
+                            <script>
+                                var map;
+                                function initMap() {
+                                    var latitude = {{ $tracking->latitude }};
+                                    var longitude = {{ $tracking->longitude }};
+                                    map = new google.maps.Map(document.getElementById('map'), {
+                                        center: {lat: latitude, lng: longitude},
+                                        zoom: 19
+                                    });
+                                    var marker = new google.maps.Marker({
+                                        position: {lat: latitude, lng: longitude},
+                                        map: map
+                                    });
+                                }
+                            </script>
+                            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHV6Sxsq5XldAyCAtirJoj7VVrotpz92c
+                            &callback=initMap" async defer></script>
+                        @else
+                            <iframe src="//www.google.com/maps/embed/v1/place?q={{ $tracking->geolocation }}
                                 &zoom=10&attribution_source=Google+Maps+Embed+API
                                 &attribution_web_url=https://developers.google.com/maps/documentation/embed/
                                 &key=AIzaSyBmMgh9QLh_fn9d51SbcsZa7O98Aw86T9s" allowfullscreen
                                 style="width:100%;height:400px;border:none;border-radius:10px">
                             </iframe>
-                        @else
-                            <div id="map" style="width:100%;height:400px;border:none;border-radius:10px"></div>
-                            <script>
-                                var map;
-                                function initMap() {
-                                    var latitude = '{{ $tracking->latitude }}';
-                                    var longitude = '{{ $tracking->longitude }}';
-                                    map = new google.maps.Map(document.getElementById('map'), {
-                                        center: {lat: latitude, lng: longitude},
-                                        zoom: 10
-                                    });
-                                }
-                            </script>
-                            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlbr-P0KgUndoATbTMfpd551D8snb6J1c
-                            &callback=initMap" async defer></script>
                         @endif
                     </div>
                 </div>
