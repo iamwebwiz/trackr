@@ -94,7 +94,7 @@
                                 Shipper Address
                             </div>
                             <div class="panel-body">
-                                {{ $tracking->shipper_address }}
+                                {!! $tracking->shipper_address !!}
                             </div>
                         </div>
                     </div>
@@ -104,7 +104,7 @@
                                 Receiver Address
                             </div>
                             <div class="panel-body">
-                                {{ $tracking->receiver_address }}
+                                {!! $tracking->receiver_address !!}
                             </div>
                         </div>
                     </div>
@@ -167,7 +167,7 @@
                                         <h4>Payment Mode:</h4> {{ $tracking->payment_mode }}
                                     </div>
                                     <div class="col-md-4 col-sm-4">
-                                        <h4>Total Freight:</h4> {{ $tracking->totalFreight }}
+                                        {{-- <h4>Total Freight:</h4> {{ $tracking->totalFreight }} --}}
                                     </div>
                                     <div class="col-md-4 col-sm-4">
                                         <h4>Expected Delivery Date:</h4> {{ $tracking->expected_delivery_date }}

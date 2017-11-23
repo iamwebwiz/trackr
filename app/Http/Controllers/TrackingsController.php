@@ -42,7 +42,6 @@ class TrackingsController extends Controller
         $tracking->carrier = $request->carrier;
         $tracking->weight = $request->weight;
         $tracking->product = $request->product;
-        $tracking->totalFreight = $request->totalFreight;
         $tracking->pickup_date = $request->pickup_date;
         $tracking->pickup_time = $request->pickup_time;
         $tracking->expected_delivery_date = $request->expected_delivery_date;

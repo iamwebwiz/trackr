@@ -30,10 +30,9 @@ class CreateTrackingsTable extends Migration
             $table->string('carrier')->nullable();
             $table->string('weight')->nullable();
             $table->string('product')->nullable();
-            $table->integer('totalFreight')->nullable();
-            $table->string('pickup_date')->nullable();
+            $table->date('pickup_date')->nullable();
             $table->string('pickup_time')->nullable();
-            $table->string('expected_delivery_date')->nullable();
+            $table->date('expected_delivery_date')->nullable();
             $table->integer('quantity')->nullable();
             $table->string('shipment_mode')->nullable();
             $table->string('shipment_status')->nullable();

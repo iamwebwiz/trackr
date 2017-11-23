@@ -99,17 +99,9 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="totalFreight" class="control-label col-sm-4">Total Freight</label>
-                                        <div class="col-sm-8">
-                                            <input type="number" name="totalFreight" placeholder="Total Freight" class="form-control"
-                                            value="{{ Request::old('totalFreight') }}">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
                                         <label for="pickup_date" class="control-label col-sm-4">Pickup Date</label>
                                         <div class="col-sm-8">
-                                            <input type="text" name="pickup_date" placeholder="Pickup Date" class="form-control" value="{{ Request::old('pickup_date') }}">
+                                            <input type="date" name="pickup_date" placeholder="Pickup Date" class="form-control" value="{{ Request::old('pickup_date') }}">
                                         </div>
                                     </div>
 
@@ -123,7 +115,7 @@
                                     <div class="form-group">
                                         <label for="expected_delivery_date" class="control-label col-sm-4">Expected Delivery Date</label>
                                         <div class="col-sm-8">
-                                            <input type="text" name="expected_delivery_date" placeholder="Expected Delivery Date" class="form-control"
+                                            <input type="date" name="expected_delivery_date" placeholder="Expected Delivery Date" class="form-control"
                                             value="{{ Request::old('expected_delivery_date') }}">
                                         </div>
                                     </div>
