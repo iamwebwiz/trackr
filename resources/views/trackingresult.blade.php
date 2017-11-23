@@ -77,11 +77,11 @@
                                     });
                                 }
                             </script>
-                            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHV6Sxsq5XldAyCAtirJoj7VVrotpz92c
+                            <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDHV6Sxsq5XldAyCAtirJoj7VVrotpz92c
                             &callback=initMap" async defer></script>
                         @else
-                            <iframe src="//www.google.com/maps/embed/v1/place?q={{ $tracking->geolocation }}
-                                &zoom=10&attribution_source=Google+Maps+Embed+API
+                            <iframe src="http://www.google.com/maps/embed/v1/place?q={{ $tracking->geolocation }}
+                                &zoom=18&attribution_source=Google+Maps+Embed+API
                                 &attribution_web_url=https://developers.google.com/maps/documentation/embed/
                                 &key=AIzaSyBmMgh9QLh_fn9d51SbcsZa7O98Aw86T9s" allowfullscreen
                                 style="width:100%;height:400px;border:none;border-radius:10px">
