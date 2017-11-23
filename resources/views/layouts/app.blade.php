@@ -32,7 +32,7 @@
                         <!-- insert the image for logo here using the format below: -->
                         <!-- <img src="{{ asset('images/logo.png') }}"> -->
                         <!-- the "images/logo.png" specify the file path which is located in public/images/logo.png -->
-                        {{ config('app.name', 'Laravel') }}
+                        Trackr
                     </a>
                 </div>
 

@@ -27,19 +27,28 @@
                         <h4>Dashboard</h4>
                     </div>
                     <div class="panel-body">
-                        <div class="container">
+                        {{-- <div class="container"> --}}
                             <div class="row">
                                 <div class="col-md-6 col-sm-6">
                                     <a href="{{ url('trackings') }}">
-                                        <div class="panel panel-primary">
-                                            <div class="panel-heading"></div>
-                                            <div class="panel-body"></div>
+                                        <div class="panel panel-primary text-center">
+                                            <div class="panel-heading">ALL TRACKINGS</div>
+                                            <div class="panel-body"><h1>{{ DB::table('trackings')->count() }}</h1></div>
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col-md-6 col-sm-6"></div>
+                                <div class="col-md-6 col-sm-6">
+                                    <a href="{{ url('trackings/new') }}">
+                                        <div class="panel panel-default text-center">
+                                            <div class="panel-heading">ADD NEW TRACKING</div>
+                                            <div class="panel-body">
+                                                <h1><i class="glyphicon glyphicon-plus"></i></h1>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
+                        {{-- </div> --}}
                     </div>
                 </div>
             </div>
