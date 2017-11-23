@@ -27,7 +27,19 @@
                         <h4>Dashboard</h4>
                     </div>
                     <div class="panel-body">
-                        Deli Deli Deli
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <a href="{{ url('trackings') }}">
+                                        <div class="panel panel-primary">
+                                            <div class="panel-heading"></div>
+                                            <div class="panel-body"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-6 col-sm-6"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

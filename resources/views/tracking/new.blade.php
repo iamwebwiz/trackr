@@ -145,7 +145,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="geolocation" class="control-label col-sm-4">Location</label>
+                                        <label for="geolocation" class="control-label col-sm-4">Location <small>To be shown on map</small></label>
                                         <div class="col-sm-8">
                                             <input type="text" name="geolocation" placeholder="Location" class="form-control">
                                         </div>
