@@ -48,10 +48,12 @@
                     <img src="{{ asset('images/barcode.png') }}" alt="Barcode">
                 </div>
                 <div class="col-md-8 col-sm-8">
-                    <img src="http://maps.googleapis.com/maps/api/staticmap?center={{ $tracking->geolocation }}
-                    &markers=color:blue%7Clabel:S%7C11211%7C11206%7C11222&zoom=15&size=900x350
-                    &key=AIzaSyB7Pnis6JtjO519HDhwTvsJZ3rPC-B1_TE" width="100%" style="border-radius: 10px"
-                    alt="Location">
+                    <iframe src="//www.google.com/maps/embed/v1/place?q={{ $tracking->geolocation }}
+                        &zoom=10&attribution_source=Google+Maps+Embed+API
+                        &attribution_web_url=https://developers.google.com/maps/documentation/embed/
+                        &key=AIzaSyBmMgh9QLh_fn9d51SbcsZa7O98Aw86T9s" allowfullscreen
+                        style="width:100%;height:400px;border:none;border-radius:10px">
+                    </iframe>
                 </div>
             </div>
 
