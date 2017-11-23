@@ -35,119 +35,153 @@
                                     <div class="form-group">
                                         <label for="origin" class="control-label col-sm-4">Origin</label>
                                         <div class="col-sm-8">
-                                            <input type="text" name="origin" placeholder="Origin" class="form-control">
+                                            <input type="text" name="origin" placeholder="Origin" class="form-control" value="{{ Request::old('origin') }}">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="destination" class="control-label col-sm-4">Destination</label>
                                         <div class="col-sm-8">
-                                            <input type="text" name="destination" placeholder="Destination" class="form-control">
+                                            <input type="text" name="destination" placeholder="Destination" class="form-control" value="{{ Request::old('destination') }}">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="shipment_type" class="control-label col-sm-4">Shipment Type</label>
                                         <div class="col-sm-8">
-                                            <input type="text" name="shipment_type" placeholder="Shipment Type" class="form-control">
+                                            <input type="text" name="shipment_type" placeholder="Shipment Type" class="form-control"
+                                            value="{{ Request::old('shipment_type') }}">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="payment_mode" class="control-label col-sm-4">Payment Mode</label>
                                         <div class="col-sm-8">
-                                            <input type="text" name="payment_mode" placeholder="Payment Mode" class="form-control">
+                                            <input type="text" name="payment_mode" placeholder="Payment Mode" class="form-control"
+                                            value="{{ Request::old('payment_mode') }}">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="departure_time" class="control-label col-sm-4">Departure Time</label>
                                         <div class="col-sm-8">
-                                            <input type="text" name="departure_time" placeholder="Departure Time" class="form-control">
+                                            <input type="text" name="departure_time" placeholder="Departure Time" class="form-control"
+                                            value="{{ Request::old('departure_time') }}">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="package" class="control-label col-sm-4">Package</label>
                                         <div class="col-sm-8">
-                                            <input type="text" name="package" placeholder="Package" class="form-control">
+                                            <input type="text" name="package" placeholder="Package" class="form-control" value="{{ Request::old('package') }}">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="carrier" class="control-label col-sm-4">Carrier</label>
                                         <div class="col-sm-8">
-                                            <input type="text" name="carrier" placeholder="Carrier" class="form-control">
+                                            <input type="text" name="carrier" placeholder="Carrier" class="form-control" value="{{ Request::old('carrier') }}">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="weight" class="control-label col-sm-4">Weight (Kg)</label>
                                         <div class="col-sm-8">
-                                            <input type="number" name="weight" placeholder="Weight (Kg)" class="form-control">
+                                            <input type="number" name="weight" placeholder="Weight (Kg)" class="form-control" value="{{ Request::old('weight') }}">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="product" class="control-label col-sm-4">Product</label>
                                         <div class="col-sm-8">
-                                            <input type="text" name="product" placeholder="Product" class="form-control">
+                                            <input type="text" name="product" placeholder="Product" class="form-control" value="{{ Request::old('product') }}">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="totalFreight" class="control-label col-sm-4">Total Freight</label>
                                         <div class="col-sm-8">
-                                            <input type="number" name="totalFreight" placeholder="Total Freight" class="form-control">
+                                            <input type="number" name="totalFreight" placeholder="Total Freight" class="form-control"
+                                            value="{{ Request::old('totalFreight') }}">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="pickup_date" class="control-label col-sm-4">Pickup Date</label>
                                         <div class="col-sm-8">
-                                            <input type="text" name="pickup_date" placeholder="Pickup Date" class="form-control">
+                                            <input type="text" name="pickup_date" placeholder="Pickup Date" class="form-control" value="{{ Request::old('pickup_date') }}">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="pickup_time" class="control-label col-sm-4">Pickup Time</label>
                                         <div class="col-sm-8">
-                                            <input type="text" name="pickup_time" placeholder="Pickup Time" class="form-control">
+                                            <input type="text" name="pickup_time" placeholder="Pickup Time" class="form-control" value="{{ Request::old('pickup_time') }}">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="expected_delivery_date" class="control-label col-sm-4">Expected Delivery Date</label>
                                         <div class="col-sm-8">
-                                            <input type="text" name="expected_delivery_date" placeholder="Expected Delivery Date" class="form-control">
+                                            <input type="text" name="expected_delivery_date" placeholder="Expected Delivery Date" class="form-control"
+                                            value="{{ Request::old('expected_delivery_date') }}">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="quantity" class="control-label col-sm-4">Quantity</label>
                                         <div class="col-sm-8">
-                                            <input type="number" name="quantity" placeholder="Quantity" class="form-control">
+                                            <input type="number" name="quantity" placeholder="Quantity" class="form-control" value="{{ Request::old('quantity') }}">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="shipment_mode" class="control-label col-sm-4">Shipment Mode</label>
                                         <div class="col-sm-8">
-                                            <input type="text" name="shipment_mode" placeholder="Shipment Mode" class="form-control">
+                                            <input type="text" name="shipment_mode" placeholder="Shipment Mode" class="form-control"
+                                            value="{{ Request::old('shipment_mode') }}">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="shipment_status" class="control-label col-sm-4">Shipment Status</label>
                                         <div class="col-sm-8">
-                                            <input type="text" name="shipment_status" placeholder="Shipment Status" class="form-control">
+                                            <input type="text" name="shipment_status" placeholder="Shipment Status" class="form-control"
+                                            value="{{ Request::old('shipment_status') }}">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="geolocation" class="control-label col-sm-4">Location <small>To be shown on map</small></label>
+                                        <label for="location-type" class="control-label col-sm-4">Location Type</label>
                                         <div class="col-sm-8">
-                                            <input type="text" name="geolocation" placeholder="Location" class="form-control">
+                                            <select id="location-type" class="form-control">
+                                                <option value="">Choose Location Type</option>
+                                                <option value="geolocation">Geographical Location / Address</option>
+                                                <option value="coordinates">Coordinates (Latitude &amp; Longitude)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" id="geolocation">
+                                        <label for="geolocation" class="control-label col-sm-4">Location <small>(To be shown on map)</small></label>
+                                        <div class="col-sm-8">
+                                            <input type="text" name="geolocation" id="geolocationAddress" placeholder="Location" class="form-control" value="{{ Request::old('geolocation') }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" id="coordinates">
+                                        <label for="coordinates" class="control-label col-sm-4">Coordinates <small>(To be shown on map)</small></label>
+                                        <div class="col-sm-8">
+                                            <div class="row">
+                                                <div class="col-md-6 col-sm-6">
+                                                    <input type="text" name="latitude" id="latitude" placeholder="Latitude" class="form-control"
+                                                    value="{{ Request::old('latitude') }}">
+                                                </div>
+                                                <div class="col-md-6 col-sm-6">
+                                                    <input type="text" name="longitude" id="longitude" placeholder="Longitude" class="form-control"
+                                                    value="{{ Request::old('longitude') }}">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -155,7 +189,7 @@
                                         <label for="shipper_address" class="control-label col-sm-4">Shipper Address</label>
                                         <div class="col-sm-8">
                                             <textarea name="shipper_address" rows="5" class="form-control"
-                                            placeholder="Shipper Address"></textarea>
+                                            placeholder="Shipper Address">{{ Request::old('shipper_address') }}</textarea>
                                         </div>
                                     </div>
 
@@ -163,7 +197,7 @@
                                         <label for="receiver_address" class="control-label col-sm-4">Receiver Address</label>
                                         <div class="col-sm-8">
                                             <textarea name="receiver_address" rows="5" class="form-control"
-                                            placeholder="Receiver Address"></textarea>
+                                            placeholder="Receiver Address">{{ Request::old('receiver_address') }}</textarea>
                                         </div>
                                     </div>
 
@@ -182,5 +216,29 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#geolocation, #coordinates').hide();
+            var locationType = $('#location-type');
+            locationType.on('change', function(){
+                if (locationType.val() == 'geolocation') {
+                    $('#geolocation').slideDown('fast');
+                    $('#coordinates').slideUp('fast').hide();
+                    $('#latitude').val('');
+                    $('#longitude').val('');
+                }
+                else if (locationType.val() == 'coordinates') {
+                    $('#coordinates').slideDown('fast');
+                    $('#geolocation').slideUp('fast').hide();
+                    $('#geolocationAddress').val('');
+                }
+                else {
+                    $('#coordinates, #geolocation').hide();
+                    $('#geolocationAddress, #latitude, #longitude').val('');
+                }
+            });
+        });
+    </script>
 
 @endsection
