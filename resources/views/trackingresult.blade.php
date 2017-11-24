@@ -60,6 +60,14 @@
 
             </form>
 
+            <div class="container" style="margin-top:50px" align="center">
+                <a href="http://axonfreight.com/" target="_blank" class="btn btn-warning"
+                style="background:#ff6700;color:#fff;font-family:Raleway;font-weight:bolder;
+                padding-top:15px;padding-bottom:15px;padding-right:30px;padding-left:30px;width:30%">
+                    Go To Main Site
+                </a>
+            </div>
+
             <hr>
 
             @if (empty($tracking))
