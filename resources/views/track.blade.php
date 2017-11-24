@@ -16,12 +16,17 @@
         <style>
             body {
                 padding-top: 50px;
+                background-image: url({{ url('images/boat-cargo.jpg') }});
+                background-size: cover;
+                background-repeat: no-repeat;
             }
         </style>
     </head>
     <body>
 
-        <div class="container">
+        <div class="container" align="center">
+
+            <img src="{{ asset('images/AXon.png') }}" alt="Logo" style="margin-bottom:50px;">
 
             <form action="{{ route('displayTrackingDetails') }}" method="post" class="form-inline">
                 {{ csrf_field() }}

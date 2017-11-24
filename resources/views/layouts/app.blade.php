@@ -15,10 +15,19 @@
 
     <!-- JQuery -->
     <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+
+    <style>
+        body {
+            background-image: url({{ url('images/boat-cargo.jpg') }});
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-static-top"
+        style="padding-bottom:15px;">
             <div class="container">
                 <div class="navbar-header">
 
@@ -32,10 +41,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/home') }}">
-                        <!-- insert the image for logo here using the format below: -->
-                        <!-- <img src="{{ asset('images/logo.png') }}"> -->
-                        <!-- the "images/logo.png" specify the file path which is located in public/images/logo.png -->
-                        Trackr
+                        <img src="{{ asset('images/AXon.png') }}" alt="Trackr" width="120">
                     </a>
                 </div>
 
@@ -50,7 +56,7 @@
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                            {{-- <li><a href="{{ route('register') }}">Register</a></li> --}}
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

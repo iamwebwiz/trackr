@@ -24,7 +24,7 @@ class TrackingsTableSeeder extends Seeder
         $tracking->departure_time = '08:30';
         $tracking->package = 'Silver Items';
         $tracking->carrier = 'Ferris Air';
-        $tracking->weight = '400kg';
+        $tracking->weight = '400';
         $tracking->product = 'Silver Items';
         $tracking->pickup_date = '2017-11-22';
         $tracking->pickup_time = '08:30';

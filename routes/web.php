@@ -18,7 +18,15 @@ Route::get('/', function () {
 Route::get('track', 'FrontendController@showTrackingForm')->name('showTrackingForm');
 Route::post('track', 'FrontendController@displayTrackingDetails')->name('displayTrackingDetails');
 
-Auth::routes();
+// Auth::routes();
+
+Route::get('registeruser', 'Auth\RegisterController@showRegistrationForm');
+Route::post('registeruser', 'Auth\RegisterController@register')->name('register');
+Route::get('login', 'Auth\LoginController@showLoginForm');
+Route::post('login', 'Auth\LoginController@login')->name('login');
+Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+Route::post('password/reset', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('trackings', 'TrackingsController@showAllTrackings')->name('showAllTrackings');
