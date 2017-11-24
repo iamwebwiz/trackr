@@ -18,7 +18,13 @@
                 padding-top: 50px;
                 background-image: url({{ url('images/boat-cargo.jpg') }});
                 background-size: cover;
+                background-position: center;
                 background-repeat: no-repeat;
+                font-family: Raleway;
+                font-weight: bold;
+            }
+            h1,h2,h3,h4,h5,h6 {
+                font-weight: bolder;
             }
         </style>
 
@@ -38,13 +44,16 @@
             <form action="{{ route('displayTrackingDetails') }}" method="post" class="form-inline">
                 {{ csrf_field() }}
 
-                <div class="form-group">
+                <div class="form-group" style="margin-right:30px">
                     <label for="trackingID" class="sr-only">Tracking ID</label>
-                    <input type="text" name="trackingID" placeholder="Enter Tracking ID" class="form-control">
+                    <input type="text" name="trackingID" placeholder="Enter Tracking ID" class="form-control"
+                    style="padding-left:30px;padding-right:30px;padding-top:25px;padding-bottom:25px;font-family:Raleway;
+                    font-weight:bold">
                 </div>
 
                 <div class="form-group">
-                    <button class="btn btn-success" type="submit">
+                    <button class="btn btn-warning" type="submit" style="background:#ff6700;color:#fff;font-family:Raleway;
+                    font-weight:bolder;padding-top:15px;padding-bottom:15px;padding-right:30px;padding-left:30px">
                         TRACK RESULT
                     </button>
                 </div>
