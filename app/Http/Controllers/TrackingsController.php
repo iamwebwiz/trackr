@@ -54,4 +54,38 @@ class TrackingsController extends Controller
         }
         return back()->with('err', 'Oops, An Error Occured!');
     }
+
+    public function showEditTrackingForm($id)
+    {
+        $this->data['tracking'] = \App\Tracking::where('trackingID', $id)->first();
+        return view('tracking/edit', $this->data);
+    }
+
+    public function editTracking(Request $request, $id)
+    {
+        $this->data['tracking'] = \App\Tracking::where('trackingID', $id)->first();
+
+        $this->data['tracking']->geolocation = $request->geolocation;
+        $this->data['tracking']->latitude = $request->latitude;
+        $this->data['tracking']->longitude = $request->longitude;
+        $this->data['tracking']->shipper_address = $request->shipper_address;
+        $this->data['tracking']->receiver_address = $request->receiver_address;
+        $this->data['tracking']->origin = $request->origin;
+        $this->data['tracking']->destination = $request->destination;
+        $this->data['tracking']->shipment_type = $request->shipment_type;
+        $this->data['tracking']->payment_mode = $request->payment_mode;
+        $this->data['tracking']->departure_time = $request->departure_time;
+        $this->data['tracking']->package = $request->package;
+        $this->data['tracking']->carrier = $request->carrier;
+        $this->data['tracking']->weight = $request->weight;
+        $this->data['tracking']->product = $request->product;
+        $this->data['tracking']->pickup_date = $request->pickup_date;
+        $this->data['tracking']->pickup_time = $request->pickup_time;
+        $this->data['tracking']->expected_delivery_date = $request->expected_delivery_date;
+        $this->data['tracking']->quantity = $request->quantity;
+        $this->data['tracking']->shipment_mode = $request->shipment_mode;
+        $this->data['tracking']->shipment_status = $request->shipment_status;
+        $this->data['tracking']->save();
+        return redirect()->route('showAllTrackings')->with('info', 'Tracking details updated');
+    }
 }

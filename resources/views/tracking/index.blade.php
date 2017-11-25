@@ -44,6 +44,12 @@
                                                 <td>{{ $tracking->trackingID }}</td>
                                                 <td>{{ $tracking->origin }}</td>
                                                 <td>{{ $tracking->destination }}</td>
+                                                <td>
+                                                    <a href="{{ route('showEditTrackingForm', ['id'=>$tracking->trackingID]) }}"
+                                                    class="btn btn-info">
+                                                        Edit
+                                                    </a>
+                                                </td>
                                             </tr>
                                         @endforeach
                                     </tbody>
