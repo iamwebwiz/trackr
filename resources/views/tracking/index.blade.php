@@ -49,6 +49,10 @@
                                                     class="btn btn-info">
                                                         Edit
                                                     </a>
+                                                    <a href="{{ route('delete', ['id'=>$tracking->trackingID]) }}"
+                                                    class="btn btn-danger" id="deleteTracking">
+                                                        Delete
+                                                    </a>
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -67,5 +71,19 @@
             </div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function(){
+            $('a#deleteTracking').click(function(e){
+                // e.preventDefault();
+                var response = confirm('Are you sure you sure you want to delete this tracking record?');
+                if (response) {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+        });
+    </script>
 
 @endsection

@@ -88,4 +88,10 @@ class TrackingsController extends Controller
         $this->data['tracking']->save();
         return redirect()->route('showAllTrackings')->with('info', 'Tracking details updated');
     }
+
+    public function delete($id)
+    {
+        \App\Tracking::where('trackingID', $id)->delete();
+        return back()->with('info', 'Tracking Information deleted');
+    }
 }
