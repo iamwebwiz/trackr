@@ -13,8 +13,8 @@ class FrontendController extends Controller
 
     public function displayTrackingDetails(Request $request)
     {
+        $data = array();
         $data['tracking'] = \App\Tracking::where('trackingID', $request->trackingID)->first();
-
         return view('trackingresult', $data);
     }
 }
