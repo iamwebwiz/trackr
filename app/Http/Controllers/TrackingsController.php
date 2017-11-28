@@ -39,6 +39,11 @@ class TrackingsController extends Controller
         $tracking->payment_mode = $request->payment_mode;
         $tracking->departure_time = $request->departure_time;
         $tracking->package = $request->package;
+        if (!is_null($request->image)) {
+            $filepath = $request->carrier.time().'.'.$request->image->getClientOriginalExtension();
+            $image = $request->image->move(public_path('images/trackings'), $filepath);
+            $tracking->image = $filepath;
+        }
         $tracking->carrier = $request->carrier;
         $tracking->weight = $request->weight;
         $tracking->product = $request->product;
@@ -76,6 +81,11 @@ class TrackingsController extends Controller
         $this->data['tracking']->payment_mode = $request->payment_mode;
         $this->data['tracking']->departure_time = $request->departure_time;
         $this->data['tracking']->package = $request->package;
+        if (!is_null($request->image)) {
+            $filepath = $request->carrier.time().'.'.$request->image->getClientOriginalExtension();
+            $image = $request->image->move(public_path('images/trackings'), $filepath);
+            $this->data['tracking']->image = $filepath;
+        }
         $this->data['tracking']->carrier = $request->carrier;
         $this->data['tracking']->weight = $request->weight;
         $this->data['tracking']->product = $request->product;

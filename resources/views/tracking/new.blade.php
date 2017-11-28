@@ -30,7 +30,8 @@
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1">
                                 @include('partials.alerts')
-                                <form action="{{ route('addNewTracking') }}" method="post" class="form-horizontal">
+                                <form action="{{ route('addNewTracking') }}" method="post" class="form-horizontal"
+                                enctype="multipart/form-data">
                                     {{ csrf_field() }}
                                     <div class="form-group">
                                         <label for="origin" class="control-label col-sm-4">Origin</label>
@@ -74,6 +75,16 @@
                                         <label for="package" class="control-label col-sm-4">Package</label>
                                         <div class="col-sm-8">
                                             <input type="text" name="package" placeholder="Package" class="form-control" value="{{ Request::old('package') }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="image" class="control-label col-sm-4">Image</label>
+                                        <div class="col-sm-8">
+                                            <label class="btn btn-info">
+                                                <span class="glyphicon glyphicon-camera"></span> Choose Image
+                                                <input type="file" name="image" accept="image/*" style="display:none" class="form-control">
+                                            </label>
                                         </div>
                                     </div>
 

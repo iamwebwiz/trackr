@@ -88,6 +88,11 @@
                                 <h3>TRACKING NO: {{ $tracking->trackingID }}</h3>
                                 <br>
                                 <img src="{{ asset('images/barcode.png') }}" alt="Barcode">
+                                <br><br>
+                                <a href="{{ asset('images/trackings/'.$tracking->image) }}" target="_blank">
+                                    <img src="{{ asset('images/trackings/'.$tracking->image) }}" width="250" alt="Tracking Image"
+                                    class="img-thumbnail">
+                                </a>
                             </div>
                             <div class="col-md-8 col-sm-8">
                                 @if (is_null($tracking->geolocation))

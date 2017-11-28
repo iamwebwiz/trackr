@@ -27,6 +27,7 @@ class CreateTrackingsTable extends Migration
             $table->string('payment_mode')->nullable();
             $table->string('departure_time')->nullable();
             $table->string('package')->nullable();
+            $table->string('image')->nullable();
             $table->string('carrier')->nullable();
             $table->string('weight')->nullable();
             $table->string('product')->nullable();
