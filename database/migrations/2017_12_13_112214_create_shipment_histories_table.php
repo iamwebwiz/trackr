@@ -17,8 +17,8 @@ class CreateShipmentHistoriesTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('tracking_id');
             $table->string('location');
-            $table->timestamp('date');
-            $table->time('time');
+            $table->string('date');
+            $table->string('time');
             $table->string('status');
             $table->timestamps();
         });

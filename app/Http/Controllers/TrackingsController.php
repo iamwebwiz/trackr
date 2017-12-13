@@ -125,4 +125,25 @@ class TrackingsController extends Controller
         $tracking->shipmentHistories()->save($history);
         return back()->with('success', 'Shipment History Added');
     }
+
+    public function showEditShipmentHistory($trackingID, $id)
+    {
+        $tracking = Tracking::where('trackingID', $trackingID)->first();
+        $history = ShipmentHistory::findOrFail($id);
+        $data = ['tracking'=>$tracking, 'history'=>$history];
+        return view('tracking/history/edit', $data);
+    }
+
+    public function editShipmentHistory(Request $request, $trackingID, $id)
+    {
+        $tracking = Tracking::where('trackingID', $trackingID)->first();
+
+        $history = ShipmentHistory::findOrFail($id);
+        $history->location = $request->shipping_location;
+        $history->date = $request->shipping_date;
+        $history->time = $request->shipping_time;
+        $history->status = $request->shipping_status;
+        $history->save();
+        return redirect()->route('showEditTrackingForm', $trackingID)->with('success', 'Shipment History Updated');
+    }
 }

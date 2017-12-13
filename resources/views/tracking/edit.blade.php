@@ -238,7 +238,8 @@
                                                     <td class="time">{{ date('H:ia', strtotime($history->time)) }}</td>
                                                     <td class="status">{{ $history->status }}</td>
                                                     <td>
-                                                        <a href="#" class="edit btn btn-info">Edit</a>
+                                                        <a href="{{ url('trackings/'.$tracking->trackingID.'/history/'.$history->id.'/edit') }}"
+                                                        class="btn btn-info">Edit</a>
                                                     </td>
                                                 </tr>
                                             @endforeach
@@ -307,62 +308,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Modal to Edit Shipment History -->
-                        <div id="editModal" class="modal fade" role="dialog">
-                            <div class="modal-dialog">
-                                <!-- Modal content-->
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">Edit Shipment History</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form action="{{ route('addNewShipmentHistory', ['id'=>$tracking->trackingID]) }}" method="post">
-                                            {{ csrf_field() }}
-                                            <div class="form-group">
-                                                <label>Location</label>
-                                                <div>
-                                                    <input type="text" name="shipping_location" id="shipping_location" placeholder="Shipment Location"
-                                                    class="form-control">
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label>Date</label>
-                                                <div>
-                                                    <input type="text" name="shipping_date" id="shipping_date" placeholder="Shipment Date"
-                                                    class="form-control">
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label>Time</label>
-                                                <div>
-                                                    <input type="text" name="shipping_time" id="shipping_time" placeholder="Shipment Time"
-                                                    class="form-control">
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label>Status</label>
-                                                <div>
-                                                    <textarea name="shipping_status" id="shipping_status" rows="5" class="form-control"
-                                                    placeholder="Shipment Status"></textarea>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <button class="btn btn-success" type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -371,26 +316,6 @@
 
     <script type="text/javascript">
         $(document).ready(function(){
-            // Edit Modal
-            $('.edit').on('click', function(event) {
-                event.preventDefault();
-
-                // Get the necessary fields
-                var shipping_location = $(this).parent().parent().find('td').eq(0).text();
-                var shipping_date = $(this).parent().parent().find('td').eq(1).text();
-                var shipping_time = $(this).parent().parent().find('td').eq(2).text();
-                var shipping_status = $(this).parent().parent().find('td').eq(3).text();
-
-                // Pass the values into the edit modal
-                $('#shipping_location').val(shipping_location);
-                $('#shipping_date').val(shipping_date);
-                $('#shipping_time').val(shipping_time);
-                $('#shipping_status').val(shipping_status);
-
-                // Initialize the modal
-                $('#editModal').modal();
-            });
-
             // Geolocation
             $('#geolocation, #coordinates').hide();
             var locationType = $('#location-type');
