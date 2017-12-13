@@ -34,4 +34,5 @@ Route::get('trackings/new', 'TrackingsController@showNewTrackingForm')->name('sh
 Route::post('trackings/new', 'TrackingsController@addNewTracking')->name('addNewTracking');
 Route::get('trackings/{id}/edit', 'TrackingsController@showEditTrackingForm')->name('showEditTrackingForm');
 Route::put('trackings/{id}/edit', 'TrackingsController@editTracking')->name('editTracking');
+Route::post('trackings/{id}/edit', 'TrackingsController@newShipmentHistory')->name('addNewShipmentHistory');
 Route::get('trackings/{id}/delete', 'TrackingsController@delete')->name('delete');

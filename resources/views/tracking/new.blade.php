@@ -235,9 +235,8 @@
                                     <div class="form-group">
                                         <label class="control-label col-sm-4">Status</label>
                                         <div class="col-sm-8">
-                                            <textarea name="shipping_status" rows="5" class="form-control" placeholder="Shipment Status">
-                                                {{ old('shipping_status') }}
-                                            </textarea>
+                                            <textarea name="shipping_status" rows="5" class="form-control"
+                                            placeholder="Shipment Status">{{ old('shipping_status') }}</textarea>
                                         </div>
                                     </div>
 

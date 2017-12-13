@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\ShipmentHistory;
+use App\Tracking;
 use Illuminate\Http\Request;
 
 class TrackingsController extends Controller
@@ -111,5 +112,17 @@ class TrackingsController extends Controller
     {
         \App\Tracking::where('trackingID', $id)->delete();
         return back()->with('info', 'Tracking Information deleted');
+    }
+
+    public function newShipmentHistory(Request $request, $id)
+    {
+        $tracking = Tracking::where('trackingID', $id)->first();
+        $history = new ShipmentHistory;
+        $history->location = $request->shipping_location;
+        $history->date = $request->shipping_date;
+        $history->time = $request->shipping_time;
+        $history->status = $request->shipping_status;
+        $tracking->shipmentHistories()->save($history);
+        return back()->with('success', 'Shipment History Added');
     }
 }
