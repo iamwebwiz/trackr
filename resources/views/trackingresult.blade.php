@@ -223,6 +223,36 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">Shipment History</div>
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped">
+                                        <thead>
+                                            <th>Location</th>
+                                            <th>Date</th>
+                                            <th>Time</th>
+                                            <th>Status/Activity</th>
+                                        </thead>
+                                        <tbody>
+                                            @foreach ($tracking->shipmentHistories()->orderBy('created_at', 'desc')->get() as $history)
+                                                <tr>
+                                                    <td>{{ $history->location }}</td>
+                                                    <td>{{ date('d/m/Y', strtotime($history->date)) }}</td>
+                                                    <td>{{ date('H:ia', strtotime($history->time)) }}</td>
+                                                    <td>{{ $history->status }}</td>
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             @endif
 
         </div>
