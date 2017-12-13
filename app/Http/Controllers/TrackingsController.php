@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\ShipmentHistory;
 use Illuminate\Http\Request;
 
 class TrackingsController extends Controller
@@ -55,6 +56,13 @@ class TrackingsController extends Controller
         $tracking->shipment_status = $request->shipment_status;
 
         if ($tracking->save()) {
+            $history = new ShipmentHistory;
+            $history->location = $request->shipping_location;
+            $history->date = $request->shipping_date;
+            $history->time = $request->shipping_time;
+            $history->status = $request->shipping_status;
+            $tracking->shipmentHistories()->save($history);
+
             return redirect()->route('showAllTrackings')->with('success', 'Tracking Added Successfully!');
         }
         return back()->with('err', 'Oops, An Error Occured!');
