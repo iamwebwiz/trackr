@@ -156,67 +156,67 @@
                             <div class="panel-body">
                                 <div class="row">
                                     <div class="col-md-4 col-sm-4">
-                                        <h4>Origin:</h4> {{ $tracking->origin }}
+                                        <h4>Origin:</h4> {!! $tracking->origin !!}
                                     </div>
                                     <div class="col-md-4 col-sm-4">
-                                        <h4>Package:</h4> {{ $tracking->package }}
+                                        <h4>Package:</h4> {!! $tracking->package !!}
                                     </div>
                                     <div class="col-md-4 col-sm-4">
-                                        <h4>Status:</h4> {{ $tracking->shipment_status }}
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-4">
-                                        <h4>Destination:</h4> {{ $tracking->destination }}
-                                    </div>
-                                    <div class="col-md-4 col-sm-4">
-                                        <h4>Carrier:</h4> {{ $tracking->carrier }}
-                                    </div>
-                                    <div class="col-md-4 col-sm-4">
-                                        <h4>Departure Time:</h4> {{ $tracking->departure_time }}
+                                        <h4>Status:</h4> {!! $tracking->shipment_status !!}
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="row">
                                     <div class="col-md-4 col-sm-4">
-                                        <h4>Type of Shipment:</h4> {{ $tracking->shipment_type }}
+                                        <h4>Destination:</h4> {!! $tracking->destination !!}
                                     </div>
                                     <div class="col-md-4 col-sm-4">
-                                        <h4>Weight:</h4> {{ $tracking->weight.'kg' }}
+                                        <h4>Carrier:</h4> {!! $tracking->carrier !!}
                                     </div>
                                     <div class="col-md-4 col-sm-4">
-                                        <h4>Shipment Mode:</h4> {{ $tracking->shipment_mode }}
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-4">
-                                        <h4>Carrier Reference No.</h4> {{ $tracking->trackingID }}
-                                    </div>
-                                    <div class="col-md-4 col-sm-4">
-                                        <h4>Product:</h4> {{ $tracking->product }}
-                                    </div>
-                                    <div class="col-md-4 col-sm-4">
-                                        <h4>Quantity:</h4> {{ $tracking->quantity }}
+                                        <h4>Departure Time:</h4> {!! $tracking->departure_time !!}
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="row">
                                     <div class="col-md-4 col-sm-4">
-                                        <h4>Pick-up Time:</h4> {{ $tracking->pickup_time }}
+                                        <h4>Type of Shipment:</h4> {!! $tracking->shipment_type !!}
                                     </div>
                                     <div class="col-md-4 col-sm-4">
-                                        <h4>Pick-up Date:</h4> {{ $tracking->pickup_date }}
+                                        <h4>Weight:</h4> {!! $tracking->weight.'kg' !!}
                                     </div>
                                     <div class="col-md-4 col-sm-4">
-                                        <h4>Expected Delivery Date:</h4> {{ $tracking->expected_delivery_date }}
+                                        <h4>Shipment Mode:</h4> {!! $tracking->shipment_mode !!}
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="row">
                                     <div class="col-md-4 col-sm-4">
-                                        <h4>Payment Mode:</h4> {{ $tracking->payment_mode }}
+                                        <h4>Carrier Reference No.</h4> {!! $tracking->trackingID !!}
+                                    </div>
+                                    <div class="col-md-4 col-sm-4">
+                                        <h4>Product:</h4> {!! $tracking->product !!}
+                                    </div>
+                                    <div class="col-md-4 col-sm-4">
+                                        <h4>Quantity:</h4> {!! $tracking->quantity !!}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4">
+                                        <h4>Pick-up Time:</h4> {!! $tracking->pickup_time !!}
+                                    </div>
+                                    <div class="col-md-4 col-sm-4">
+                                        <h4>Pick-up Date:</h4> {!! $tracking->pickup_date !!}
+                                    </div>
+                                    <div class="col-md-4 col-sm-4">
+                                        <h4>Expected Delivery Date:</h4> {!! $tracking->expected_delivery_date !!}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4">
+                                        <h4>Payment Mode:</h4> {!! $tracking->payment_mode !!}
                                     </div>
                                 </div>
                             </div>

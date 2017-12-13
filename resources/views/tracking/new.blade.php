@@ -204,6 +204,43 @@
                                         </div>
                                     </div>
 
+                                    <hr>
+
+                                    <h3 class="text-center">Shipment History</h3>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-4">Location</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" name="shipping_location" placeholder="Shipment Location"
+                                            class="form-control" value="{{ old('shipping_location') }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-4">Date</label>
+                                        <div class="col-sm-8">
+                                            <input type="date" name="shipping_date" placeholder="Shipment Date"
+                                            class="form-control" value="{{ old('shipping_date') }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-4">Time</label>
+                                        <div class="col-sm-8">
+                                            <input type="time" name="shipping_time" placeholder="Shipment Time"
+                                            class="form-control" value="{{ old('shipping_time') }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-4">Status</label>
+                                        <div class="col-sm-8">
+                                            <textarea name="shipping_status" rows="5" class="form-control" placeholder="Shipment Status">
+                                                {{ old('shipping_status') }}
+                                            </textarea>
+                                        </div>
+                                    </div>
+
                                     <div class="form-group">
                                         <div class="col-sm-8 col-sm-offset-4">
                                             <button class="btn btn-primary" type="submit">
